@@ -1,4 +1,4 @@
-# Pseudorandom-Number-Generation
+# EX - 6 : Pseudorandom-Number-Generation
 
 ## AIM:
  Implementation of Pseudorandom Number Generation Using Standard library
