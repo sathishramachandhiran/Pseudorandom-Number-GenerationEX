@@ -14,32 +14,50 @@
 ## PROGRAM:
 ```C
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-int main() 
+unsigned long seed = 123456789; 
+unsigned long lcg() {
+    const unsigned long a = 1664525; 
+    const unsigned long c = 1013904223; 
+    const unsigned long m = 4294967296; 
+
+    seed = (a * seed + c) % m; 
+    return seed; 
+}
+
+int main()
 {
-    int count, min, max;
+    int n; 
+    unsigned long min, max;
+    printf("JAYABHARATHI S - 212222100013\n"); 
     printf("Enter the number of random numbers to generate: ");
-    scanf("%d", &count);
+    scanf("%d", &n);
     printf("Enter the minimum value: ");
-    
-    scanf("%d", &min);
+    scanf("%lu", &min);
     printf("Enter the maximum value: ");
-    scanf("%d", &max);
-    srand(time(NULL));
-    printf("Pseudorandom numbers:\n");   
-    for (int i = 0; i < count; i++) 
-    {
-        int random_number = (rand() % (max - min + 1)) + min;
-        printf("%d\n", random_number);
+    scanf("%lu", &max);
+
+    if (min >= max) {
+        printf("Error: Minimum value must be less than maximum value.\n");
+        return 1;
     }
+
+    printf("Pseudorandom numbers:\n");
+    
+    for (int i = 0; i < n; i++) {
+        unsigned long random_number = lcg(); 
+        unsigned long scaled_number = min + (random_number % (max - min + 1));
+        printf("%lu\n", scaled_number);
+    }
+    
     return 0;
 }
+
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/2ec21deb-0fdc-4c7b-ae78-95baf50f9be5)
+![image](https://github.com/user-attachments/assets/c0373e1d-c96e-4379-8fbf-cfd9c9b198d2)
+
 
 
 ## RESULT:
