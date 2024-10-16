@@ -29,7 +29,7 @@ int main()
 {
     int n; 
     unsigned long min, max;
-    printf("JAYABHARATHI S - 212222100013\n"); 
+    printf("SUBMITTED BY: SATHISH R - 212222100048\n");
     printf("Enter the number of random numbers to generate: ");
     scanf("%d", &n);
     printf("Enter the minimum value: ");
@@ -53,11 +53,11 @@ int main()
     return 0;
 }
 
+
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/c0373e1d-c96e-4379-8fbf-cfd9c9b198d2)
-
+![image](rng.png)
 
 
 ## RESULT:
